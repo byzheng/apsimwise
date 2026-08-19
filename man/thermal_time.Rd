@@ -19,8 +19,46 @@ The thermal time.
 Calculate thermal time for a crop
 }
 \examples{
+
+# Example weather data
 mint <- c(0, 10)
 maxt <- c(30, 40)
 date <- as.Date(c("2024-01-01", "2024-01-02"))
-thermal_time(mint, maxt, date = date, latitude = -27, crop = "lupin")
+
+# Use default lupin parameters
+thermal_time(
+  mint,
+  maxt,
+  date = date,
+  latitude = -27,
+  crop = "lupin"
+)
+
+# Modify the global lupin thermal time response
+crop("lupin")$set(
+  "phenology.thermal_time",
+  list(
+    x = c(0, 25, 35),
+    y = c(0, 25, 0)
+  )
+)
+
+thermal_time(
+  mint,
+  maxt,
+  date = date,
+  latitude = -27,
+  crop = "lupin"
+)
+
+# Override thermal time parameters for a single call
+thermal_time(
+  mint,
+  maxt,
+  date = date,
+  latitude = -27,
+  crop = "lupin",
+  x_temp = c(0, 25, 35),
+  y_temp = c(0, 25, 0)
+)
 }
