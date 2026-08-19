@@ -36,7 +36,7 @@ thermal_time(
 
 # Modify the global lupin thermal time response
 crop("lupin")$set(
-  "phenology.thermal_time",
+  "phenology.thermal_time" =
   list(
     x = c(0, 25, 35),
     y = c(0, 25, 0)

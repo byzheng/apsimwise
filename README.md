@@ -24,8 +24,8 @@ library(apsimwise)
 
 This package installs and loads the core APSIMWISE ecosystem, including:
 
-- `rapsimng`
 - `tidyweather`
+- `rapsimng`
 - `rapsimng.wheat`
 - `rapsimng.canola`
 - `rapsimng.chickpea`
