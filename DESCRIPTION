@@ -1,0 +1,39 @@
+Package: apsimwise
+Title: Unified Access to the APSIMWISE Ecosystem
+Version: 0.1.0
+Authors@R: 
+    person("Bangou", "Zheng", email = "zheng.bangyou@gmail.com", role = c("aut", "cre"))
+Description: Provides a unified interface to the APSIMWISE ecosystem of R packages 
+    for crop modelling, weather analysis, and agricultural decision support.
+    The package simplifies installation and loading of APSIMWISE packages 
+    and exposes common user-facing functions that work consistently across
+    multiple crop types.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+Depends: R (>= 4.1.0)
+Imports:
+    rapsimng.wheat,
+    rapsimng.lupin,
+    rapsimng.chickpea,
+    rapsimng.fababean,
+    rapsimng.lentil,
+    rapsimng.canola
+Suggests: 
+    testthat (>= 3.0.0),
+    tidyweather
+Remotes:
+    byzheng/optree,
+    byzheng/tidyweather,
+    byzheng/rapsimng,
+    byzheng/rapsimng.canola,
+    byzheng/rapsimng.wheat,
+    byzheng/rapsimng.lupin,
+    byzheng/rapsimng.chickpea,
+    byzheng/rapsimng.fababean,
+    byzheng/rapsimng.lentil
+Config/testthat/edition: 3
+URL: https://apsimwise.rapsimng.bangyou.me/,
+    https://github.com/byzheng/apsimwise
+BugReports: https://github.com/byzheng/apsimwise/issues
+Config/roxygen2/version: 8.1.0
