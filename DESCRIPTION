@@ -23,7 +23,10 @@ Imports:
     tidyweather
 Suggests: 
     testthat (>= 3.0.0),
-    dplyr
+    dplyr,
+    knitr,
+    quarto,
+    ggplot2
 Remotes:
     byzheng/tidyweather,
     byzheng/rapsimng,
@@ -38,3 +41,4 @@ URL: https://apsimwise.bangyou.me/,
     https://github.com/byzheng/apsimwise
 BugReports: https://github.com/byzheng/apsimwise/issues
 Config/roxygen2/version: 8.1.0
+VignetteBuilder: knitr, quarto

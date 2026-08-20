@@ -14,3 +14,4 @@ CRAN-SUBMISSION
 .DS_Store
 .quarto
 pkgdown
+**/.quarto/

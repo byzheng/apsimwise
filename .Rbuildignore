@@ -16,3 +16,5 @@ cran-comments.md
 ^CRAN-SUBMISSION$
 ^.vscode$
 ^man/figures/logo-original.png$
+^vignettes/\.quarto$
+^vignettes/*_files$

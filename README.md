@@ -1,5 +1,5 @@
 
-# apsimwise <img src="man/figures/logo.png" align="right" height="120" alt="" />
+# apsimwise <img src="man/figures/logo.png" align="right" height="120" alt="Icon of apsimwise" />
 
 [![](https://www.r-pkg.org/badges/version/apsimwise?color=green)](https://cran.r-project.org/package=apsimwise)
 [![R-CMD-check.yaml](https://github.com/byzheng/apsimwise/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/byzheng/apsimwise/actions/workflows/R-CMD-check.yaml)
