@@ -13,3 +13,4 @@ CRAN-SUBMISSION
 .httr-oauth
 .DS_Store
 .quarto
+pkgdown

@@ -34,7 +34,7 @@ Remotes:
     byzheng/rapsimng.fababean,
     byzheng/rapsimng.lentil
 Config/testthat/edition: 3
-URL: https://apsimwise.rapsimng.bangyou.me/,
+URL: https://apsimwise.bangyou.me/,
     https://github.com/byzheng/apsimwise
 BugReports: https://github.com/byzheng/apsimwise/issues
 Config/roxygen2/version: 8.1.0
