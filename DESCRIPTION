@@ -2,7 +2,7 @@ Package: apsimwise
 Title: Unified Access to the APSIMWISE Ecosystem
 Version: 0.1.0
 Authors@R: 
-    person("Bangou", "Zheng", email = "zheng.bangyou@gmail.com", role = c("aut", "cre"))
+    person("Bangyou", "Zheng", email = "zheng.bangyou@gmail.com", role = c("aut", "cre"))
 Description: Provides a unified interface to the APSIMWISE ecosystem of R packages 
     for crop modelling, weather analysis, and agricultural decision support.
     The package simplifies installation and loading of APSIMWISE packages 
