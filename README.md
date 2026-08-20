@@ -1,6 +1,14 @@
-[![R-CMD-check.yaml](https://github.com/byzheng/apsimwise/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/byzheng/apsimwise/actions/workflows/R-CMD-check.yaml)
 
 # apsimwise <img src="man/figures/logo.png" align="right" height="120" alt="" />
+
+[![](https://www.r-pkg.org/badges/version/apsimwise?color=green)](https://cran.r-project.org/package=apsimwise)
+[![R-CMD-check.yaml](https://github.com/byzheng/apsimwise/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/byzheng/apsimwise/actions/workflows/R-CMD-check.yaml)
+
+[![](http://cranlogs.r-pkg.org/badges/grand-total/apsimwise?color=green)](https://cran.r-project.org/package=apsimwise)
+[![](http://cranlogs.r-pkg.org/badges/last-month/apsimwise?color=green)](https://cran.r-project.org/package=apsimwise)
+[![](http://cranlogs.r-pkg.org/badges/last-week/apsimwise?color=green)](https://cran.r-project.org/package=apsimwise)
+
+
 
 [apsimwise](https://apsimwise.bangyou.me/) is a collection of interoperable R packages for crop modelling,
 weather analysis, and agricultural decision support.
