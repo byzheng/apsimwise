@@ -74,6 +74,7 @@
     <div id="ref-examples">
     <h2>Examples</h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://apsimwise.rapsimng.bangyou.me/" class="external-link">apsimwise</a></span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="co"># Example weather data</span></span></span>
 <span class="r-in"><span><span class="va">mint</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">10</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">maxt</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">30</span>, <span class="fl">40</span><span class="op">)</span></span></span>
@@ -84,12 +85,12 @@
 <span class="r-in"><span>  <span class="va">mint</span>,</span></span>
 <span class="r-in"><span>  <span class="va">maxt</span>,</span></span>
 <span class="r-in"><span>  date <span class="op">=</span> <span class="va">date</span>,</span></span>
-<span class="r-in"><span>  latitude <span class="op">=</span> <span class="op">-</span><span class="fl">27</span>,</span></span>
+<span class="r-in"><span>  lat <span class="op">=</span> <span class="op">-</span><span class="fl">27</span>,</span></span>
 <span class="r-in"><span>  crop <span class="op">=</span> <span class="st">"lupin"</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 16.64386 24.88400</span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co"># Modify the global lupin thermal time response</span></span></span>
+<span class="r-in"><span><span class="co"># Modify the global lupin thermal time response for all following calculations</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="crop.html">crop</a></span><span class="op">(</span><span class="st">"lupin"</span><span class="op">)</span><span class="op">$</span><span class="fu">set</span><span class="op">(</span></span></span>
 <span class="r-in"><span>  <span class="st">"phenology.thermal_time"</span> <span class="op">=</span></span></span>
 <span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span></span>
@@ -97,27 +98,108 @@
 <span class="r-in"><span>    y <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">25</span>, <span class="fl">0</span><span class="op">)</span></span></span>
 <span class="r-in"><span>  <span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
-<span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">thermal_time</span><span class="op">(</span></span></span>
 <span class="r-in"><span>  <span class="va">mint</span>,</span></span>
 <span class="r-in"><span>  <span class="va">maxt</span>,</span></span>
 <span class="r-in"><span>  date <span class="op">=</span> <span class="va">date</span>,</span></span>
-<span class="r-in"><span>  latitude <span class="op">=</span> <span class="op">-</span><span class="fl">27</span>,</span></span>
+<span class="r-in"><span>  lat <span class="op">=</span> <span class="op">-</span><span class="fl">27</span>,</span></span>
 <span class="r-in"><span>  crop <span class="op">=</span> <span class="st">"lupin"</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 16.64386 24.88400</span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># Then the parameters can be reset</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="crop.html">crop</a></span><span class="op">(</span><span class="st">"lupin"</span><span class="op">)</span><span class="op">$</span><span class="fu">reset</span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Override thermal time parameters for a single call</span></span></span>
 <span class="r-in"><span><span class="fu">thermal_time</span><span class="op">(</span></span></span>
 <span class="r-in"><span>  <span class="va">mint</span>,</span></span>
 <span class="r-in"><span>  <span class="va">maxt</span>,</span></span>
 <span class="r-in"><span>  date <span class="op">=</span> <span class="va">date</span>,</span></span>
-<span class="r-in"><span>  latitude <span class="op">=</span> <span class="op">-</span><span class="fl">27</span>,</span></span>
+<span class="r-in"><span>  lat <span class="op">=</span> <span class="op">-</span><span class="fl">27</span>,</span></span>
 <span class="r-in"><span>  crop <span class="op">=</span> <span class="st">"lupin"</span>,</span></span>
 <span class="r-in"><span>  x_temp <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">25</span>, <span class="fl">35</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>  y_temp <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">25</span>, <span class="fl">0</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 16.64386 24.88400</span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># Calculate thermal time from a weather file</span></span></span>
+<span class="r-in"><span><span class="va">met_file</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata/ppd_72150.met"</span>, package <span class="op">=</span> <span class="st">"tidyweather"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="co"># Read weather records</span></span></span>
+<span class="r-in"><span><span class="va">records</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://byzheng.github.io/tidyweather/reference/read_weather.html" class="external-link">read_weather</a></span><span class="op">(</span><span class="va">met_file</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="co"># Calculate thermal time for lupin using tidyverse ways</span></span></span>
+<span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span></span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Attaching package: ‘dplyr’</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> The following objects are masked from ‘package:stats’:</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>     filter, lag</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> The following objects are masked from ‘package:base’:</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>     intersect, setdiff, setequal, union</span>
+<span class="r-in"><span><span class="va">records</span> <span class="op">|&gt;</span></span></span>
+<span class="r-in"><span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>        tt <span class="op">=</span> <span class="fu">thermal_time</span><span class="op">(</span></span></span>
+<span class="r-in"><span>            mint <span class="op">=</span> <span class="va">mint</span>,</span></span>
+<span class="r-in"><span>            maxt <span class="op">=</span> <span class="va">maxt</span>,</span></span>
+<span class="r-in"><span>            date <span class="op">=</span> <span class="va">date</span>,</span></span>
+<span class="r-in"><span>            latitude <span class="op">=</span> <span class="va">latitude</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>,</span></span>
+<span class="r-in"><span>            crop <span class="op">=</span> <span class="st">"lupin"</span></span></span>
+<span class="r-in"><span>        <span class="op">)</span></span></span>
+<span class="r-in"><span>    <span class="op">)</span> <span class="op">|&gt;</span></span></span>
+<span class="r-in"><span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">name</span>, <span class="va">date</span>, <span class="va">mint</span>, <span class="va">maxt</span>, <span class="va">tt</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 587 × 5</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    name            date        mint  maxt    tt</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> WAGGA WAGGA AMO 2023-12-01  14.4  28.7  21.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> WAGGA WAGGA AMO 2023-12-02  15.1  29.1  21.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> WAGGA WAGGA AMO 2023-12-03  10    27.8  19.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> WAGGA WAGGA AMO 2023-12-04  14.6  30.4  22.8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> WAGGA WAGGA AMO 2023-12-05  15.1  37.9  27.3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> WAGGA WAGGA AMO 2023-12-06  18.5  33.3  25.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> WAGGA WAGGA AMO 2023-12-07  14.9  33.4  25.3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> WAGGA WAGGA AMO 2023-12-08  20.4  36.4  29.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> WAGGA WAGGA AMO 2023-12-09  22.6  38.6  27.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> WAGGA WAGGA AMO 2023-12-10  22.3  34.6  28.4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 577 more rows</span></span>
+<span class="r-in"><span><span class="co"># Calculate thermal time for lupin grouped by year and site if there are multiple sites</span></span></span>
+<span class="r-in"><span><span class="co"># Create some fake data for a second site</span></span></span>
+<span class="r-in"><span><span class="va">records2</span> <span class="op">&lt;-</span> <span class="va">records</span> <span class="op">|&gt;</span></span></span>
+<span class="r-in"><span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>        name <span class="op">=</span> <span class="st">"site2"</span>,</span></span>
+<span class="r-in"><span>        mint <span class="op">=</span> <span class="va">mint</span> <span class="op">+</span> <span class="fl">1</span>,</span></span>
+<span class="r-in"><span>        maxt <span class="op">=</span> <span class="va">maxt</span> <span class="op">+</span> <span class="fl">1</span>,</span></span>
+<span class="r-in"><span>        latitude <span class="op">=</span> <span class="va">latitude</span> <span class="op">-</span> <span class="fl">10</span></span></span>
+<span class="r-in"><span>    <span class="op">)</span> <span class="op">|&gt;</span></span></span>
+<span class="r-in"><span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind_rows.html" class="external-link">bind_rows</a></span><span class="op">(</span><span class="va">records</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="co"># Calculate thermal time for lupin grouped by site</span></span></span>
+<span class="r-in"><span><span class="va">records2</span> <span class="op">|&gt;</span></span></span>
+<span class="r-in"><span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html" class="external-link">group_by</a></span><span class="op">(</span><span class="va">name</span><span class="op">)</span> <span class="op">|&gt;</span></span></span>
+<span class="r-in"><span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>        tt <span class="op">=</span> <span class="fu">thermal_time</span><span class="op">(</span></span></span>
+<span class="r-in"><span>            mint <span class="op">=</span> <span class="va">mint</span>,</span></span>
+<span class="r-in"><span>            maxt <span class="op">=</span> <span class="va">maxt</span>,</span></span>
+<span class="r-in"><span>            date <span class="op">=</span> <span class="va">date</span>,</span></span>
+<span class="r-in"><span>            latitude <span class="op">=</span> <span class="va">latitude</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>,</span></span>
+<span class="r-in"><span>            crop <span class="op">=</span> <span class="st">"lupin"</span></span></span>
+<span class="r-in"><span>        <span class="op">)</span></span></span>
+<span class="r-in"><span>    <span class="op">)</span> <span class="op">|&gt;</span></span></span>
+<span class="r-in"><span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">name</span>, <span class="va">date</span>, <span class="va">mint</span>, <span class="va">maxt</span>, <span class="va">tt</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 1,174 × 5</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># Groups:   name [2]</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    name  date        mint  maxt    tt</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> site2 2023-12-01  15.4  29.7  23.2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> site2 2023-12-02  16.1  30.1  22.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> site2 2023-12-03  11    28.8  21.3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> site2 2023-12-04  15.6  31.4  24.2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> site2 2023-12-05  16.1  38.9  28.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> site2 2023-12-06  19.5  34.3  27.1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> site2 2023-12-07  15.9  34.4  26.8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> site2 2023-12-08  21.4  37.4  28.8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> site2 2023-12-09  23.6  39.6  23.3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> site2 2023-12-10  23.3  35.6  29.8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 1,164 more rows</span></span>
 </code></pre></div>
     </div>
   </div>
