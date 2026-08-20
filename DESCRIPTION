@@ -18,10 +18,11 @@ Imports:
     rapsimng.chickpea,
     rapsimng.fababean,
     rapsimng.lentil,
-    rapsimng.canola
+    rapsimng.canola,
+    tidyweather
 Suggests: 
     testthat (>= 3.0.0),
-    tidyweather
+    dplyr
 Remotes:
     byzheng/optree,
     byzheng/tidyweather,
