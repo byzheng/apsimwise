@@ -5,6 +5,18 @@
 \alias{reexports}
 \alias{read_weather}
 \alias{day_length}
+\alias{read_apsimx}
+\alias{write_apsimx}
+\alias{run_models}
+\alias{search_path}
+\alias{search_node}
+\alias{read_report}
+\alias{list_report}
+\alias{append_model}
+\alias{insert_model}
+\alias{insert_models}
+\alias{remove_model}
+\alias{replace_model}
 \title{Objects exported from other packages}
 \keyword{internal}
 \description{
@@ -12,6 +24,8 @@ These objects are imported from other packages. Follow the links
 below to see their documentation.
 
 \describe{
+  \item{rapsimng}{\code{\link[rapsimng:append_model]{append_model()}}, \code{\link[rapsimng:insert_model]{insert_model()}}, \code{\link[rapsimng:insert_models]{insert_models()}}, \code{\link[rapsimng:list_report]{list_report()}}, \code{\link[rapsimng:read_apsimx]{read_apsimx()}}, \code{\link[rapsimng:read_report]{read_report()}}, \code{\link[rapsimng:remove_model]{remove_model()}}, \code{\link[rapsimng:replace_model]{replace_model()}}, \code{\link[rapsimng:run_models]{run_models()}}, \code{\link[rapsimng:search_node]{search_node()}}, \code{\link[rapsimng:search_path]{search_path()}}, \code{\link[rapsimng:write_apsimx]{write_apsimx()}}}
+
   \item{tidyweather}{\code{\link[tidyweather:day_length]{day_length()}}, \code{\link[tidyweather:read_weather]{read_weather()}}}
 }}
 
