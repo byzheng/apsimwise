@@ -20,12 +20,6 @@ a common set of tools.
 
 ## Installation
 
-From CRAN:
-
-```r
-install.packages("apsimwise")
-```
-
 From GitHub for the latest development version: 
 
 ```r
