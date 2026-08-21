@@ -2,9 +2,9 @@
 
 ``` r
 
-library(apsimwise)
 library(dplyr)
 library(ggplot2)
+library(apsimwise)
 ```
 
 ## Introduction
@@ -54,7 +54,6 @@ from the `tidyweather` package.
 
 ``` r
 
-library(tidyweather)
 met_files <- system.file(
     c("extdata/ppd_72150.met", "extdata/ppd_40082.met"),
     package = "tidyweather"
@@ -286,7 +285,7 @@ function in the `apsimwise` package for wheat, lupin, and canola.
 
 tt_wheat <- records |>
     mutate(
-        tt = apsimwise::thermal_time(
+        tt = thermal_time(
             mint = mint,
             maxt = maxt,
             crop = "wheat"
@@ -296,7 +295,7 @@ tt_wheat <- records |>
 tt_lupin <- records |>
     group_by(name) |>
     mutate(
-        tt = apsimwise::thermal_time(
+        tt = thermal_time(
             mint = mint,
             maxt = maxt,
             date = date,
@@ -307,7 +306,7 @@ tt_lupin <- records |>
     mutate(crop = "lupin")
 tt_canola <- records |>
     mutate(
-        tt = apsimwise::thermal_time(
+        tt = thermal_time(
             mint = mint,
             maxt = maxt,
             crop = "canola"
@@ -349,7 +348,7 @@ apsimwise layer.
 records |>
     group_by(name) |>
     mutate(
-        tt = apsimwise::thermal_time(
+        tt = thermal_time(
             mint = mint,
             maxt = maxt,
             date = date,
@@ -372,14 +371,14 @@ allows users to customise parameters for all following calculations.
 
 ``` r
 
-apsimwise::crop("lupin")$set(
+crop("lupin")$set(
     "phenology.thermal_time.x" = c(0, 25, 35),
     "phenology.thermal_time.y" = c(0, 25, 0)
 )
 records |>
     group_by(name) |>
     mutate(
-        tt = apsimwise::thermal_time(
+        tt = thermal_time(
             mint = mint,
             maxt = maxt,
             date = date,

@@ -77,9 +77,9 @@
 
     <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://apsimwise.bangyou.me/">apsimwise</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://apsimwise.bangyou.me/">apsimwise</a></span><span class="op">)</span></span></code></pre></div>
 </div>
 <section class="level2"><h2 id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
@@ -125,8 +125,7 @@
 <p>The weather data in APSIM format is read using <code><a href="https://byzheng.github.io/tidyweather/reference/read_weather.html" class="external-link">read_weather()</a></code> from the <code>tidyweather</code> package.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyweather.bangyou.me/" class="external-link">tidyweather</a></span><span class="op">)</span></span>
-<span><span class="va">met_files</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span></span>
+<code class="sourceCode R"><span><span class="va">met_files</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span></span>
 <span>    <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"extdata/ppd_72150.met"</span>, <span class="st">"extdata/ppd_40082.met"</span><span class="op">)</span>,</span>
 <span>    package <span class="op">=</span> <span class="st">"tidyweather"</span></span>
 <span><span class="op">)</span></span>
@@ -315,7 +314,7 @@ Figure 2
 <div class="sourceCode cell-code" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">tt_wheat</span> <span class="op">&lt;-</span> <span class="va">records</span> <span class="op">|&gt;</span></span>
 <span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span></span>
-<span>        tt <span class="op">=</span> <span class="fu">apsimwise</span><span class="fu">::</span><span class="fu"><a href="../reference/thermal_time.html">thermal_time</a></span><span class="op">(</span></span>
+<span>        tt <span class="op">=</span> <span class="fu"><a href="../reference/thermal_time.html">thermal_time</a></span><span class="op">(</span></span>
 <span>            mint <span class="op">=</span> <span class="va">mint</span>,</span>
 <span>            maxt <span class="op">=</span> <span class="va">maxt</span>,</span>
 <span>            crop <span class="op">=</span> <span class="st">"wheat"</span></span>
@@ -325,7 +324,7 @@ Figure 2
 <span><span class="va">tt_lupin</span> <span class="op">&lt;-</span> <span class="va">records</span> <span class="op">|&gt;</span></span>
 <span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html" class="external-link">group_by</a></span><span class="op">(</span><span class="va">name</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span></span>
-<span>        tt <span class="op">=</span> <span class="fu">apsimwise</span><span class="fu">::</span><span class="fu"><a href="../reference/thermal_time.html">thermal_time</a></span><span class="op">(</span></span>
+<span>        tt <span class="op">=</span> <span class="fu"><a href="../reference/thermal_time.html">thermal_time</a></span><span class="op">(</span></span>
 <span>            mint <span class="op">=</span> <span class="va">mint</span>,</span>
 <span>            maxt <span class="op">=</span> <span class="va">maxt</span>,</span>
 <span>            date <span class="op">=</span> <span class="va">date</span>,</span>
@@ -336,7 +335,7 @@ Figure 2
 <span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span>crop <span class="op">=</span> <span class="st">"lupin"</span><span class="op">)</span></span>
 <span><span class="va">tt_canola</span> <span class="op">&lt;-</span> <span class="va">records</span> <span class="op">|&gt;</span></span>
 <span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span></span>
-<span>        tt <span class="op">=</span> <span class="fu">apsimwise</span><span class="fu">::</span><span class="fu"><a href="../reference/thermal_time.html">thermal_time</a></span><span class="op">(</span></span>
+<span>        tt <span class="op">=</span> <span class="fu"><a href="../reference/thermal_time.html">thermal_time</a></span><span class="op">(</span></span>
 <span>            mint <span class="op">=</span> <span class="va">mint</span>,</span>
 <span>            maxt <span class="op">=</span> <span class="va">maxt</span>,</span>
 <span>            crop <span class="op">=</span> <span class="st">"canola"</span></span>
@@ -378,7 +377,7 @@ Figure 3
 <code class="sourceCode R"><span><span class="va">records</span> <span class="op">|&gt;</span></span>
 <span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html" class="external-link">group_by</a></span><span class="op">(</span><span class="va">name</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span></span>
-<span>        tt <span class="op">=</span> <span class="fu">apsimwise</span><span class="fu">::</span><span class="fu"><a href="../reference/thermal_time.html">thermal_time</a></span><span class="op">(</span></span>
+<span>        tt <span class="op">=</span> <span class="fu"><a href="../reference/thermal_time.html">thermal_time</a></span><span class="op">(</span></span>
 <span>            mint <span class="op">=</span> <span class="va">mint</span>,</span>
 <span>            maxt <span class="op">=</span> <span class="va">maxt</span>,</span>
 <span>            date <span class="op">=</span> <span class="va">date</span>,</span>
@@ -395,14 +394,14 @@ Figure 3
 <p><code><a href="../reference/crop.html">crop()</a></code> can be used to modify the default crop parameters in the <code>apsimwise</code> package. This allows users to customise parameters for all following calculations.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb15"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">apsimwise</span><span class="fu">::</span><span class="fu"><a href="../reference/crop.html">crop</a></span><span class="op">(</span><span class="st">"lupin"</span><span class="op">)</span><span class="op">$</span><span class="fu">set</span><span class="op">(</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/crop.html">crop</a></span><span class="op">(</span><span class="st">"lupin"</span><span class="op">)</span><span class="op">$</span><span class="fu">set</span><span class="op">(</span></span>
 <span>    <span class="st">"phenology.thermal_time.x"</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">25</span>, <span class="fl">35</span><span class="op">)</span>,</span>
 <span>    <span class="st">"phenology.thermal_time.y"</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">25</span>, <span class="fl">0</span><span class="op">)</span></span>
 <span><span class="op">)</span></span>
 <span><span class="va">records</span> <span class="op">|&gt;</span></span>
 <span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html" class="external-link">group_by</a></span><span class="op">(</span><span class="va">name</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span></span>
-<span>        tt <span class="op">=</span> <span class="fu">apsimwise</span><span class="fu">::</span><span class="fu"><a href="../reference/thermal_time.html">thermal_time</a></span><span class="op">(</span></span>
+<span>        tt <span class="op">=</span> <span class="fu"><a href="../reference/thermal_time.html">thermal_time</a></span><span class="op">(</span></span>
 <span>            mint <span class="op">=</span> <span class="va">mint</span>,</span>
 <span>            maxt <span class="op">=</span> <span class="va">maxt</span>,</span>
 <span>            date <span class="op">=</span> <span class="va">date</span>,</span>
