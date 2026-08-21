@@ -300,9 +300,9 @@ records |>
 
 This allows temporary experimentation without modifying global crop settings.
 
-### Overriding Parameters in the Crop Package
+### Overriding Parameters in the `crop()` function
 
-`crop()` can be used to modify the default crop parameters in the crop package. This allows users to customise parameters for all following calculations.
+`crop()` can be used to modify the default crop parameters in the `apsimwise` package. This allows users to customise parameters for all following calculations.
 ```{r tt-override-crop-package, eval = FALSE}
 apsimwise::crop("lupin")$set(
 	"phenology.thermal_time.x" = c(0, 25, 35),
