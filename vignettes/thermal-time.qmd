@@ -62,7 +62,6 @@ The separation has three goals:
 
 The weather data in APSIM format is read using `read_weather()` from the `tidyweather` package.
 ```{r read-weather}
-library(tidyweather)
 met_files <- system.file(
 	c("extdata/ppd_72150.met", "extdata/ppd_40082.met"),
 	package = "tidyweather"
