@@ -364,11 +364,11 @@ records |>
 This allows temporary experimentation without modifying global crop
 settings.
 
-### Overriding Parameters in the Crop Package
+### Overriding Parameters in the `crop()` function
 
 [`crop()`](https://apsimwise.bangyou.me/reference/crop.md) can be used
-to modify the default crop parameters in the crop package. This allows
-users to customise parameters for all following calculations.
+to modify the default crop parameters in the `apsimwise` package. This
+allows users to customise parameters for all following calculations.
 
 ``` r
 

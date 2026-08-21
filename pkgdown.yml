@@ -3,7 +3,7 @@ pkgdown: 2.2.1
 pkgdown_sha: ~
 articles:
   thermal-time: thermal-time.html
-last_built: 2026-08-21T00:01Z
+last_built: 2026-08-21T00:13Z
 urls:
   reference: https://apsimwise.bangyou.me/reference
   article: https://apsimwise.bangyou.me/articles
