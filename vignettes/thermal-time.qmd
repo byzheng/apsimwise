@@ -16,6 +16,9 @@ knitr:
 
 
 ```{r setup}
+if (nzchar(Sys.getenv("R_LIBS_USER"))) {
+  .libPaths(c(Sys.getenv("R_LIBS_USER"), .libPaths()))
+}
 library(dplyr)
 library(ggplot2)
 library(apsimwise)
