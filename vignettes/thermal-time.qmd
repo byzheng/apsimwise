@@ -16,9 +16,12 @@ knitr:
 
 
 ```{r setup}
-library(apsimwise)
 library(dplyr)
 library(ggplot2)
+```
+
+```{r load-packages, eval = FALSE}
+library(apsimwise)
 ```
 
 ## Introduction
@@ -229,7 +232,7 @@ The thermal times are calculated using the `thermal_time()` function in the `aps
 ```{r tt2-crop}
 tt_wheat <- records |>
 	mutate(
-		tt = apsimwise::thermal_time(
+		tt = thermal_time(
 			mint = mint,
 			maxt = maxt,
 			crop = "wheat"
@@ -239,7 +242,7 @@ tt_wheat <- records |>
 tt_lupin <- records |>
 	group_by(name) |>
 	mutate(
-		tt = apsimwise::thermal_time(
+		tt = thermal_time(
 			mint = mint,
 			maxt = maxt,
 			date = date,
@@ -250,7 +253,7 @@ tt_lupin <- records |>
 	mutate(crop = "lupin")
 tt_canola <- records |>
 	mutate(
-		tt = apsimwise::thermal_time(
+		tt = thermal_time(
 			mint = mint,
 			maxt = maxt,
 			crop = "canola"
@@ -286,7 +289,7 @@ There are two ways to override the default crop parameters in the apsimwise laye
 records |>
 	group_by(name) |>
 	mutate(
-		tt = apsimwise::thermal_time(
+		tt = thermal_time(
 			mint = mint,
 			maxt = maxt,
 			date = date,
@@ -304,14 +307,14 @@ This allows temporary experimentation without modifying global crop settings.
 
 `crop()` can be used to modify the default crop parameters in the `apsimwise` package. This allows users to customise parameters for all following calculations.
 ```{r tt-override-crop-package, eval = FALSE}
-apsimwise::crop("lupin")$set(
+crop("lupin")$set(
 	"phenology.thermal_time.x" = c(0, 25, 35),
 	"phenology.thermal_time.y" = c(0, 25, 0)
 )
 records |>
 	group_by(name) |>
 	mutate(
-		tt = apsimwise::thermal_time(
+		tt = thermal_time(
 			mint = mint,
 			maxt = maxt,
 			date = date,
