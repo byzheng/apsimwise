@@ -15,3 +15,5 @@ CRAN-SUBMISSION
 .quarto
 pkgdown
 **/.quarto/
+/doc/
+/Meta/

@@ -18,3 +18,5 @@ cran-comments.md
 ^man/figures/logo-original.png$
 ^vignettes/\.quarto$
 ^vignettes/*_files$
+^doc$
+^Meta$
