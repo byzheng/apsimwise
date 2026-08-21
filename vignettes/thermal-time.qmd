@@ -18,9 +18,6 @@ knitr:
 ```{r setup}
 library(dplyr)
 library(ggplot2)
-```
-
-```{r load-packages, eval = FALSE}
 library(apsimwise)
 ```
 
