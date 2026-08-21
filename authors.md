@@ -2,7 +2,7 @@
 
 ## Authors
 
-- **Bangou Zheng**. Author, maintainer.
+- **Bangyou Zheng**. Author, maintainer.
 
 ## Citation
 
@@ -14,7 +14,7 @@ R package version 0.1.0, <https://apsimwise.bangyou.me/>.
 
     @Manual{,
       title = {apsimwise: Unified Access to the APSIMWISE Ecosystem},
-      author = {Bangou Zheng},
+      author = {Bangyou Zheng},
       year = {2026},
       note = {R package version 0.1.0},
       url = {https://apsimwise.bangyou.me/},

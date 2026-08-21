@@ -1,8 +1,9 @@
 pandoc: 3.8.3
 pkgdown: 2.2.1
 pkgdown_sha: ~
-articles: {}
-last_built: 2026-08-20T03:46Z
+articles:
+  thermal-time: thermal-time.html
+last_built: 2026-08-21T00:01Z
 urls:
   reference: https://apsimwise.bangyou.me/reference
   article: https://apsimwise.bangyou.me/articles
