@@ -49,7 +49,7 @@ The separation has three goals:
 3.  Provide a simple user-facing interface.
 
 The weather data in APSIM format is read using
-[`read_weather()`](https://byzheng.github.io/tidyweather/reference/read_weather.html)
+[`read_weather()`](https://tidyweather.bangyou.me/reference/read_weather.html)
 from the `tidyweather` package.
 
 ``` r

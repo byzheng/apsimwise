@@ -122,7 +122,7 @@
 <li>Keep crop-specific knowledge close to each crop package.</li>
 <li>Provide a simple user-facing interface.</li>
 </ol>
-<p>The weather data in APSIM format is read using <code><a href="https://byzheng.github.io/tidyweather/reference/read_weather.html" class="external-link">read_weather()</a></code> from the <code>tidyweather</code> package.</p>
+<p>The weather data in APSIM format is read using <code><a href="https://tidyweather.bangyou.me/reference/read_weather.html" class="external-link">read_weather()</a></code> from the <code>tidyweather</code> package.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">met_files</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span></span>
@@ -130,8 +130,8 @@
 <span>    package <span class="op">=</span> <span class="st">"tidyweather"</span></span>
 <span><span class="op">)</span></span>
 <span><span class="va">records</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind_rows.html" class="external-link">bind_rows</a></span><span class="op">(</span></span>
-<span>    <span class="fu"><a href="https://byzheng.github.io/tidyweather/reference/read_weather.html" class="external-link">read_weather</a></span><span class="op">(</span><span class="va">met_files</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span>,</span>
-<span>    <span class="fu"><a href="https://byzheng.github.io/tidyweather/reference/read_weather.html" class="external-link">read_weather</a></span><span class="op">(</span><span class="va">met_files</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span><span class="op">)</span></span>
+<span>    <span class="fu"><a href="https://tidyweather.bangyou.me/reference/read_weather.html" class="external-link">read_weather</a></span><span class="op">(</span><span class="va">met_files</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span>,</span>
+<span>    <span class="fu"><a href="https://tidyweather.bangyou.me/reference/read_weather.html" class="external-link">read_weather</a></span><span class="op">(</span><span class="va">met_files</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 </div>
 <section class="level3"><h3 id="layer-1-generic-weather-functions">Layer 1: Generic Weather Functions<a class="anchor" aria-label="anchor" href="#layer-1-generic-weather-functions"></a>
@@ -149,7 +149,7 @@
 <div class="sourceCode cell-code" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">tt_mean</span> <span class="op">&lt;-</span> <span class="va">records</span> <span class="op">|&gt;</span></span>
 <span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span></span>
-<span>        tt <span class="op">=</span> <span class="fu">tidyweather</span><span class="fu">::</span><span class="fu"><a href="https://byzheng.github.io/tidyweather/reference/thermal_time.html" class="external-link">thermal_time</a></span><span class="op">(</span></span>
+<span>        tt <span class="op">=</span> <span class="fu">tidyweather</span><span class="fu">::</span><span class="fu"><a href="https://tidyweather.bangyou.me/reference/thermal_time.html" class="external-link">thermal_time</a></span><span class="op">(</span></span>
 <span>            mint <span class="op">=</span> <span class="va">mint</span>,</span>
 <span>            maxt <span class="op">=</span> <span class="va">maxt</span>,</span>
 <span>            x_temp <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">26</span>, <span class="fl">37</span><span class="op">)</span>,</span>
@@ -163,7 +163,7 @@
 <div class="sourceCode cell-code" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">tt_3hour</span> <span class="op">&lt;-</span> <span class="va">records</span> <span class="op">|&gt;</span></span>
 <span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span></span>
-<span>        tt <span class="op">=</span> <span class="fu">tidyweather</span><span class="fu">::</span><span class="fu"><a href="https://byzheng.github.io/tidyweather/reference/thermal_time.html" class="external-link">thermal_time</a></span><span class="op">(</span></span>
+<span>        tt <span class="op">=</span> <span class="fu">tidyweather</span><span class="fu">::</span><span class="fu"><a href="https://tidyweather.bangyou.me/reference/thermal_time.html" class="external-link">thermal_time</a></span><span class="op">(</span></span>
 <span>            mint <span class="op">=</span> <span class="va">mint</span>,</span>
 <span>            maxt <span class="op">=</span> <span class="va">maxt</span>,</span>
 <span>            x_temp <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">26</span>, <span class="fl">37</span><span class="op">)</span>,</span>
@@ -179,7 +179,7 @@
 <code class="sourceCode R"><span><span class="va">tt_hourly</span> <span class="op">&lt;-</span> <span class="va">records</span> <span class="op">|&gt;</span></span>
 <span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html" class="external-link">group_by</a></span><span class="op">(</span><span class="va">name</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span></span>
-<span>        tt <span class="op">=</span> <span class="fu">tidyweather</span><span class="fu">::</span><span class="fu"><a href="https://byzheng.github.io/tidyweather/reference/thermal_time.html" class="external-link">thermal_time</a></span><span class="op">(</span></span>
+<span>        tt <span class="op">=</span> <span class="fu">tidyweather</span><span class="fu">::</span><span class="fu"><a href="https://tidyweather.bangyou.me/reference/thermal_time.html" class="external-link">thermal_time</a></span><span class="op">(</span></span>
 <span>            mint <span class="op">=</span> <span class="va">mint</span>,</span>
 <span>            maxt <span class="op">=</span> <span class="va">maxt</span>,</span>
 <span>            x_temp <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">26</span>, <span class="fl">37</span><span class="op">)</span>,</span>

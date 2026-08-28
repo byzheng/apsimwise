@@ -20,5 +20,5 @@ to see their documentation.
 
 - tidyweather:
 
-  [`day_length()`](https://byzheng.github.io/tidyweather/reference/day_length.html),
-  [`read_weather()`](https://byzheng.github.io/tidyweather/reference/read_weather.html)
+  [`day_length()`](https://tidyweather.bangyou.me/reference/day_length.html),
+  [`read_weather()`](https://tidyweather.bangyou.me/reference/read_weather.html)
