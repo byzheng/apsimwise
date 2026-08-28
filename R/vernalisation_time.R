@@ -10,6 +10,9 @@
 #' maxt <- c(30, 40)
 #' vernalisation_days(mint, maxt, crop = "lupin")
 vernalisation_days <- function(..., crop) {
+    stopifnot(!missing(crop))
+    stopifnot(length(crop) == 1 & is.character(crop))
+    crop <- tolower(crop)
     switch(
         crop,
         canola = rapsimng.canola::vernalisation_days(...),

@@ -16,6 +16,28 @@ test_that("Thermal time", {
     expect_equal(length(res), length(records$mint))
     expect_true(all(is.finite(res)))
 
+    # Test all crops
+    expect_no_error(
+        thermal_time(records$mint, records$maxt, date = records$date, latitude = records$latitude[1], crop = "chickpea")
+    )
+    expect_no_error(
+        thermal_time(records$mint, records$maxt, date = records$date, latitude = records$latitude[1], crop = "fababean")
+    )
+    expect_no_error(
+        thermal_time(records$mint, records$maxt, date = records$date, latitude = records$latitude[1], crop = "lentil")
+    )
+    expect_no_error(
+        thermal_time(records$mint, records$maxt, crop = "wheat")
+    )
+    expect_no_error(
+        thermal_time(records$mint, records$maxt, crop = "canola")
+    )
+    expect_no_error(
+        thermal_time(records$mint, records$maxt, crop = "CANOLA")
+    )
+    expect_no_error(
+        thermal_time(records$mint, records$maxt, crop = "caNola")
+    )
 })
 
 test_that("Thermal time error test", {

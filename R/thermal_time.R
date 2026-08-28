@@ -94,6 +94,9 @@
 #'     ) |>
 #'     select(name, date, mint, maxt, tt)
 thermal_time <- function(..., crop) {
+    stopifnot(!missing(crop))
+    stopifnot(length(crop) == 1 & is.character(crop))
+    crop <- tolower(crop)
     switch(
         crop,
         wheat = rapsimng.wheat::thermal_time(...),
