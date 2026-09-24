@@ -39,7 +39,8 @@ test_that("crop option setters are functional", {
         wheat$get("phenology.thermal_time"),
         list(
             x = c(0, 40, 40),
-            y = c(0, 25, 0)
+            y = c(0, 25, 0),
+            method = "3hr"
         )
     )
     wheat$reset()
@@ -47,7 +48,8 @@ test_that("crop option setters are functional", {
         wheat$get("phenology.thermal_time"),
         list(
             x = c(0, 26, 37),
-            y = c(0, 26, 0)
+            y = c(0, 26, 0),
+            method = "3hr"
         )
     )
 })
