@@ -184,18 +184,27 @@ rapsimng.wheat::wheat$get("phenology.thermal_time")
 #> 
 #> $y
 #> [1]  0 26  0
+#> 
+#> $method
+#> [1] "3hr"
 rapsimng.canola::canola$get("phenology.thermal_time")
 #> $x
 #> [1]  2 30 35
 #> 
 #> $y
 #> [1]  0 28  0
+#> 
+#> $method
+#> [1] "3hr"
 rapsimng.lupin::lupin$get("phenology.thermal_time")
 #> $x
 #> [1]  0 30 40
 #> 
 #> $y
 #> [1]  0 30  0
+#> 
+#> $method
+#> [1] "HourlySinPpAdjusted"
 ```
 
 The crop-specific thermal times are calculated using the

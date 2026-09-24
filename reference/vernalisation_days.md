@@ -21,7 +21,7 @@ vernalisation_days(..., crop)
 
 ## Value
 
-The vernalisation days.
+A vector of vernalisation days for the specified crop.
 
 ## Examples
 

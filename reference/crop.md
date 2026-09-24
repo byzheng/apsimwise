@@ -39,6 +39,9 @@ l$get()
 #> $phenology$thermal_time$y
 #> [1]  0 28  0
 #> 
+#> $phenology$thermal_time$method
+#> [1] "HourlySinPpAdjusted"
+#> 
 #> 
 #> $phenology$vernalisation_time
 #> $phenology$vernalisation_time$x
@@ -57,6 +60,9 @@ l$get("phenology.thermal_time")
 #> 
 #> $y
 #> [1]  0 28  0
+#> 
+#> $method
+#> [1] "HourlySinPpAdjusted"
 #> 
 
 # Modify an option

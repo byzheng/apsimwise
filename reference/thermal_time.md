@@ -21,7 +21,7 @@ thermal_time(..., crop)
 
 ## Value
 
-The thermal time.
+A vector of thermal time values for the specified crop.
 
 ## Examples
 

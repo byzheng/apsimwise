@@ -1,8 +1,5 @@
 # apsimwise
 
-[![](https://www.r-pkg.org/badges/version/apsimwise?color=green)](https://cran.r-project.org/package=apsimwise)
-[![R-CMD-check.yaml](https://github.com/byzheng/apsimwise/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/byzheng/apsimwise/actions/workflows/R-CMD-check.yaml)
-
 [![](http://cranlogs.r-pkg.org/badges/grand-total/apsimwise?color=green)](https://cran.r-project.org/package=apsimwise)
 [![](http://cranlogs.r-pkg.org/badges/last-month/apsimwise?color=green)](https://cran.r-project.org/package=apsimwise)
 [![](http://cranlogs.r-pkg.org/badges/last-week/apsimwise?color=green)](https://cran.r-project.org/package=apsimwise)
@@ -49,7 +46,7 @@ This package installs and loads the core
   - [rapsimng.chickpea](https://chickpea.rapsimng.bangyou.me/) for
     [Chickpea](https://notes.apsimng.bangyou.me/docs/Plants/Chickpea/)
   - [rapsimng.fababean](https://fababean.rapsimng.bangyou.me/) for [Faba
-    Bean](https://notes.apsimng.bangyou.me/docs/Plants/FabaBean/)
+    Bean](https://notes.apsimng.bangyou.me/docs/Plants/Fababean/)
   - [rapsimng.lentil](https://lentil.rapsimng.bangyou.me/) for
     [Lentil](https://notes.apsimng.bangyou.me/docs/Plants/Lentil/)
   - [rapsimng.lupin](https://lupin.rapsimng.bangyou.me/) for
