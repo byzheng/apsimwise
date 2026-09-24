@@ -42,7 +42,7 @@ This package installs and loads the core [apsimwise](https://apsimwise.bangyou.m
   - [rapsimng.wheat](https://wheat.rapsimng.bangyou.me/) for [Wheat](https://notes.apsimng.bangyou.me/docs/Plants/Wheat/)
   - [rapsimng.canola](https://canola.rapsimng.bangyou.me/) for [Canola](https://notes.apsimng.bangyou.me/docs/Plants/Canola/)
   - [rapsimng.chickpea](https://chickpea.rapsimng.bangyou.me/) for [Chickpea](https://notes.apsimng.bangyou.me/docs/Plants/Chickpea/)
-  - [rapsimng.fababean](https://fababean.rapsimng.bangyou.me/) for [Faba Bean](https://notes.apsimng.bangyou.me/docs/Plants/FabaBean/)
+  - [rapsimng.fababean](https://fababean.rapsimng.bangyou.me/) for [Faba Bean](https://notes.apsimng.bangyou.me/docs/Plants/Fababean/)
   - [rapsimng.lentil](https://lentil.rapsimng.bangyou.me/) for [Lentil](https://notes.apsimng.bangyou.me/docs/Plants/Lentil/)
   - [rapsimng.lupin](https://lupin.rapsimng.bangyou.me/) for [Lupin](https://notes.apsimng.bangyou.me/docs/Plants/Lupin/)
   - additional crop packages as they become available
