@@ -3,23 +3,23 @@ Title: Unified Access to the APSIMWISE Ecosystem
 Version: 0.1.0
 Authors@R: 
     person("Bangyou", "Zheng", email = "zheng.bangyou@gmail.com", role = c("aut", "cre"))
-Description: Provides a unified interface to the APSIMWISE ecosystem of R packages 
-    for crop modelling, weather analysis, and agricultural decision support.
-    The package simplifies installation and loading of APSIMWISE packages 
-    and exposes common user-facing functions that work consistently across
-    multiple crop types.
+Description: Provides a unified interface to R packages supporting the
+    Agricultural Production Systems sIMulator (APSIM), crop modelling,
+    weather analysis, and agricultural decision support. It simplifies
+    installation and loading of related packages and provides consistent
+    user-facing functions across multiple crop types.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 Depends: R (>= 4.1.0)
 Imports:
     rapsimng (>= 0.6.0),
-    rapsimng.wheat,
-    rapsimng.lupin,
-    rapsimng.chickpea,
-    rapsimng.fababean,
-    rapsimng.lentil,
-    rapsimng.canola,
+    rapsimng.wheat (>= 0.1.0),
+    rapsimng.lupin (>= 0.1.0),
+    rapsimng.chickpea (>= 0.1.0),
+    rapsimng.fababean (>= 0.1.0),
+    rapsimng.lentil (>= 0.1.0),
+    rapsimng.canola (>= 0.1.0),
     tidyweather (>= 0.3.2)
 Suggests: 
     testthat (>= 3.0.0),
