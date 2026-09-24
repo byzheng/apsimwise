@@ -20,7 +20,7 @@ Imports:
     rapsimng.fababean,
     rapsimng.lentil,
     rapsimng.canola,
-    tidyweather
+    tidyweather (>= 0.3.2)
 Suggests: 
     testthat (>= 3.0.0),
     dplyr,
