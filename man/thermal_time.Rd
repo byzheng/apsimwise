@@ -13,7 +13,7 @@ thermal_time(..., crop)
 \code{chickpea}, \code{lupin}, \code{fababean}, and \code{lentil}.}
 }
 \value{
-The thermal time.
+A vector of thermal time values for the specified crop.
 }
 \description{
 Calculate thermal time for a crop

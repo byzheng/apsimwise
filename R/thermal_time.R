@@ -3,7 +3,7 @@
 #' @param ... Arguments passed to the selected crop's thermal time function.
 #' @param crop The crop model to use. Supported crops are `wheat`, `canola`,
 #'   `chickpea`, `lupin`, `fababean`, and `lentil`.
-#' @return The thermal time.
+#' @return A vector of thermal time values for the specified crop.
 #' @export
 #' @examples
 #' 

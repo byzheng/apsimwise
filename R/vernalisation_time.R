@@ -3,7 +3,7 @@
 #' @param ... Arguments passed to the selected crop's vernalisation days function.
 #' @param crop The crop model to use. Supported crops are `canola`,
 #'   `chickpea`, `lupin`, `fababean`, and `lentil`.
-#' @return The vernalisation days.
+#' @return A vector of vernalisation days for the specified crop.
 #' @export
 #' @examples
 #' mint <- c(0, 10)

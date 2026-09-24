@@ -27,15 +27,6 @@ Suggests:
     knitr,
     quarto,
     ggplot2
-Remotes:
-    byzheng/tidyweather,
-    byzheng/rapsimng,
-    byzheng/rapsimng.canola,
-    byzheng/rapsimng.wheat,
-    byzheng/rapsimng.lupin,
-    byzheng/rapsimng.chickpea,
-    byzheng/rapsimng.fababean,
-    byzheng/rapsimng.lentil
 Config/testthat/edition: 3
 URL: https://apsimwise.bangyou.me/,
     https://github.com/byzheng/apsimwise

@@ -13,7 +13,7 @@ vernalisation_days(..., crop)
 \code{chickpea}, \code{lupin}, \code{fababean}, and \code{lentil}.}
 }
 \value{
-The vernalisation days.
+A vector of vernalisation days for the specified crop.
 }
 \description{
 Calculate vernalisation days for a crop
